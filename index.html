@@ -508,11 +508,11 @@ pre {
     <section id="method"/>
         <hr>
         <h2>Compositional Foundation Models for Hierarchical Planning</h2>
-            <br>
-            <!-- <div class="mx-auto">
-                <center><img class="card-img-top" src="img/hip.png" style="width:950px"></center>
+            <div class="flex-row">
+                <p>
+                We propose <i>Compositional Foundation Models for Hierarchical Planning</i> (<TT>HiP</TT>), a foundation model composed of different <i>expert</i> models. Each of these models is trained on different modalities of existing Internet data and jointly construct a physically executable plan to solve long-horizon tasks. 
+                </p>
             </div>
-            <br><br><br> -->
             <div class="flex-row">
                 <p>
                     <b>Large Language Model as Task Planner</b> As the language model is trained on a vast amount of data on the Internet, it captures powerful semantic priors on what steps should be taken to accomplish a particular task. Given a task specified in language and the current observation, we use a pretrained LLM as the task planner, which decomposes the goal into a sequence of subgoals.
@@ -530,7 +530,7 @@ pre {
             </div>
             <div class="flex-row">
                 <p>
-                    <b>Hierarchical consistency through Iterative Refinement</b> To ensure that the resulting plan satisfies constraints at all three levels, rather than generating a single maximum-likelihood output at each stage, each plan is generated with <i>iterative refinement</i> based on feedback from the downstream models. At each step of the language model's generative process, intermediate feedback from a likelihood estimator conditioned on an image of the current state is incorporated into the output distribution. Similarly, at each step of the video model generation, intermediate feedback from the action model refines video generation.
+                    <b>Iterative Refinement for Hierarchical consistency</b> To ensure that the resulting plan satisfies constraints at all three levels, rather than generating a single maximum-likelihood output at each stage, each plan is generated with <i>iterative refinement</i> based on feedback from the downstream models.
                 </p>
             </div>
     </section>
