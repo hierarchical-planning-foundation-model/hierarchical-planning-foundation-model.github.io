@@ -148,6 +148,7 @@ hr {
 }
 p {
     line-height: 1.25em;
+    margin: 0.25em;
 }
 .caption {
     font-size: 16px;
@@ -500,7 +501,7 @@ pre {
         <h2>Abstract</h2>
         <div class="flex-row">
             <p>
-                To make effective decisions in novel environments with long-horizon goals, it is crucial to engage in hierarchical reasoning across spatial and temporal scales. This entails planning abstract subgoal sequences, visually reasoning about the underlying plans, and executing actions in accordance with the devised plan through visual-motor control. We propose <i>Hierarchical Planning with Foundation Models</i> (<TT>HiP</TT>), a framework that leverages different modalities of knowledge to solve long-horizon tasks by integrating the different levels of decision-making. We use a large language model to construct symbolic plans that are grounded in the environment through a large video diffusion model. Generated video plans are then grounded to visual-motor control, through  an inverse dynamics model that infers actions from generated videos. To enable effective reasoning within this hierarchy, we enforce consistency between the models via <i>iterative refinement</i>. We illustrate the efficacy and adaptability of our approach in three different long-horizon table-top manipulation tasks. 
+                To make effective decisions in novel environments with long-horizon goals, it is crucial to engage in hierarchical reasoning across spatial and temporal scales. This entails planning abstract subgoal sequences, visually reasoning about the underlying plans, and executing actions in accordance with the devised plan through visual-motor control. We propose <i>Compositional Foundation Models for Hierarchical Planning</i> (<TT>HiP</TT>), a foundation model that leverages different modalities of knowledge to solve long-horizon tasks by integrating the different levels of decision-making. We use a large language model to construct symbolic plans that are grounded in the environment through a large video diffusion model. Generated video plans are then grounded to visual-motor control, through  an inverse dynamics model that infers actions from generated videos. To enable effective reasoning within this hierarchy, we enforce consistency between the models via <i>iterative refinement</i>. We illustrate the efficacy and adaptability of our approach in three different long-horizon table-top manipulation tasks. 
             </p>
         </div>
     </section>
@@ -634,6 +635,54 @@ pre {
                 </div>
             </div> 
         </div>
+    </div>
+
+    <br>
+    <div class="section">
+        <h2>Related Works</h2>
+        <hr>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+        <tr>
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <img src="img/unipi.gif" alt="PontTuset" width="240" style="border-style: none">
+                </td>
+                <td width="75%" valign="middle">
+                  <a href="https://arxiv.org/pdf/2302.00111.pdf">
+                    <papertitle>Learning Universal Policies via Text-Guided Video Generation</papertitle>
+                  </a>
+                  <p> 
+                    We cast the sequential decision making problem as a text-conditioned video generation problem, where, given a text-encoded specification of a desired goal, a planner synthesizes a set of future frames depicting its planned actions in the future, and the actions will be extracted from the generated video. Our policy-as-video formulation can represent environments with different state and action spaces in a unified space of images, enabling learning and generalization across a wide range of robotic manipulation tasks.
+                  </p>
+                </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/decisiondiff.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://openreview.net/pdf?id=sP1fo2K9DFG">
+                <papertitle>Is Conditional Generative Modeling all you need for Decision Making?</papertitle>
+              </a>
+              <p> 
+                We illustrate how conditional generative modeling is a powerful paradigm for decision-making, enabling us utilize a reward conditional model to effectively perform offline RL. We further illustrate how conditional generative modeling enables us to compose multiple different constraints and skills together.
+              </p>
+              <br>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="img/diffuser.gif" alt="PontTuset" width="240" style="border-style: none">
+            </td>
+            <td width="75%" valign="middle">
+              <a href="https://arxiv.org/abs/2205.09991">
+                <papertitle>Planning with Diffusion for Flexible Behavior Synthesis</papertitle>
+              </a>
+              <p> 
+                Diffuser is a denoising diffusion probabilistic model that plans by iteratively refining randomly sampled noise. The denoising process lends itself to flexible conditioning, by either using gradients of an objective function to bias plans toward high-reward regions or conditioning the plan to reach a specified goal.
+              </p>
+            </td>
+        </tr>
+        </tbody></table>
     </div>
 
 
